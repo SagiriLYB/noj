@@ -24,7 +24,7 @@ void Input(int n1,int n2)//将数字转化数组
         num[t]=n1%10;
         n1/=10;
     }
-    for(t=5;t<10;t++)
+    for(t=9;t>=5;t--)
     {
         num[t]=n2%10;
         n2/=10;
@@ -49,17 +49,18 @@ int main()
 {
     int n;
     cin>>n;
-    for(n1=98765;n1>=01234;n1--)
+    for(n1=01234;n1<=98765;n1++)
     {
-        for(n2=01234;n2<=98765;n2++)
+        if(n1%n==0)
         {
-            if(n1/n2==n)
+            n2=n1/n;
+            Input(n1,n2);
+            if(Judge(num)==1)
             {
-                Input(n1,n2);
-                if(Judge(num)==1) break;
+                Output(num);
+                printf("=%d\n",n);
             }
         }
-    } 
-    Output(num);
+    }
     return 0;
 }
