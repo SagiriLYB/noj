@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int num[10];
+int num[10];int n1,n2;
 
 int Judge(int num[10])//判断是否有相等数
 {
@@ -11,9 +11,9 @@ int Judge(int num[10])//判断是否有相等数
         for(t2=t1+1;t2<=9;t2++)
         {
             if(num[t1]==num[t2]) return 0;
-            else return 1;
         }
     }
+    return 1;
 }
 
 void Input(int n1,int n2)//将数字转化数组
@@ -47,15 +47,24 @@ void Output(int num[10])//输出
 
 int main()
 {
-    int n1,n2,n;int t;
+    int n;
     cin>>n;
     for(n1=98765;n1>=12345;n1--)
     {
         for(n2=12345;n2<=98765;n2++)
         {
-            if(n2/n1==n)
+            if(n1/n2==n)
             {
+                Input(n1,n2);
+                if(Judge(num)==1) break;
+                else
+                {
+                    printf("no such number");
+                    return 0;
+                }
             }
         }
-    }
+    } 
+    Output(num);
+    return 0;
 }
