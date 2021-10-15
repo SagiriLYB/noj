@@ -49,6 +49,11 @@ int main()
 {
     int n;
     cin>>n;
+    if(n>79||n<2)
+    {
+        printf("invaild value");
+        return 0;
+    }
     for(n1=01234;n1<=98765;n1++)
     {
         if(n1%n==0)
