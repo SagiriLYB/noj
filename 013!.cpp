@@ -19,6 +19,6 @@ int main()
     {
         sum=sum+An(t);
     }
-    printf("%f\n",sum);
+    printf("%f",sum);
     return 0;
 }
