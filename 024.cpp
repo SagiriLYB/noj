@@ -1,11 +1,14 @@
 #include <iostream>
+#include <cstdio>
+#include <cmath>
 using namespace std;
 
-int num[110];
+int d[100];int n;
 
-void Cal(int a,int b)
+int main()
 {
-    int c;
-    c=a/b;
+    int a,b;
+    cin>>a>>b;
+    n=a/b;
     
 }
