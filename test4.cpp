@@ -1,1 +1,11 @@
-舒适的生活 健康 快乐 社会认同 智慧 成熟的爱 
+#include <iostream>
+
+int main()
+{
+    int i=0;
+    for(i=0;i<=100;i++)
+    {
+        std::cout<<i<<std::endl;
+    }
+    return 0;
+}

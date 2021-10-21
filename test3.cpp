@@ -1,7 +1,7 @@
 #include <iostream>
-using namespace std;
+#include <cmath>
 
-int num[10]={1,2,3,4,4,6,7,8,9,0};int l1,l2;
+int l1,l2;int num[100];
 
 void Input(int n)//将数字转化数组
 {
@@ -13,13 +13,24 @@ void Input(int n)//将数字转化数组
     }
 }
 
+int Judge(int num[100])//判断是否有对应等于数
+{
+    int t;
+    for(t=0;t<=l1;t++)
+    {
+        if(num[t]==l2) return 0;
+    }
+    return 1;
+}
+
 int main()
 {
-    int i;
-    cin>>l1>>l2;
-    for(i=0;i<=l1;i++)
+    int i,sum=0,t=0;
+    std::cin>>l1>>l2;
+    for(i=pow(10,l1-1);i<pow(10,l1);i++)
     {
-        printf("%d",num[i]);
+        Input(i);
+        if(i%l2!=0&&Judge(num)==0) std::cout<<i<<std::endl;
     }
     return 0;
 }
