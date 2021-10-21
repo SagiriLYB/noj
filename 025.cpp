@@ -26,7 +26,7 @@ int Judge(int num[100])//判断是否有对应等于数
 int main()
 {
     int i,sum=0,t=0;
-    std::cin>>l1>>l2;
+    std::cin>>l2>>l1;
     for(i=pow(10,l1-1);i<pow(10,l1);i++)
     {
         Input(i);

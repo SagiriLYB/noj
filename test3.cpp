@@ -30,7 +30,10 @@ int main()
     for(i=pow(10,l1-1);i<pow(10,l1);i++)
     {
         Input(i);
-        if(i%l2!=0&&Judge(num)==0) std::cout<<i<<std::endl;
+        if(i%l2!=0&&Judge(num)==0) 
+        {
+            std::cout<<i<<std::endl;
+        }
     }
     return 0;
 }
