@@ -1,17 +1,26 @@
 #include <iostream>
 #include <cstdio>
 #include <cmath>
-using namespace std;
 
-int d[100];int n;
+int a,b,l;
+int n,num[100];
+int i,temp=0;
+
+void Output()//输出函数
+{
+    std::cout<<n<<'.';
+    for(i=0;i<l;i++) std::cout<<num[i];
+}
 
 int main()
 {
-    int a,b,l;int i1,i2;
-    cin>>a>>b>>l;
-    n=a/b;
-    for(i1=10,i2=0;i1<=pow(10,l);i1*=10,i2++)
+    std::cin>>a>>b>>l;
+    n=a/b;//整数部分计算
+    for(i=0;i<l;i++)//小数部分计算
     {
-        num[i2]=
+        temp=a%b;
+        num[i]=10*temp/b;temp=10*temp%b;
     }
+    Output;
+    return 0;
 }

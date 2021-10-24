@@ -1,11 +1,16 @@
 #include <iostream>
 
+ int i,a=1,b=6,l=4,n=12,num[100]={1,2,3,4,5};
+
+void Output()//输出函数
+{
+    std::cout<<n<<'.';
+    for(i=0;i<l;i++) std::cout<<num[i];
+}
+
 int main()
 {
-    int i=0;
-    for(i=0;i<=100;i++)
-    {
-        std::cout<<i<<std::endl;
-    }
+    Output();
     return 0;
 }
+
