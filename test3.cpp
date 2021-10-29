@@ -1,39 +1,34 @@
 #include <iostream>
 #include <cmath>
 
-int l1,l2;int num[100];
+using std::cout;
+using std::cin;
+using std::endl;
 
-void Input(int n)//将数字转化数组
+int Judge1(int n)//判断是否存在素数
 {
-    int t;
-    for(t=0;t<=l1;t++)
+    int i;
+    for(i=3;i<=sqrt(n);i+=2)
     {
-        num[t]=n%10;
-        n/=10;
+        if(n%i==0) return 0;//为合数
     }
+    return 1;//为素数
 }
 
-int Judge(int num[100])//判断是否有对应等于数
+int Judge2(int n)//判断是否为合数世纪
 {
-    int t;
-    for(t=0;t<=l1;t++)
+    int i;
+    for(i=100*n+1;i<100*(n+1)+1;i+=2)
     {
-        if(num[t]==l2) return 0;
+        if(Judge1(i)==1) return 0;//不为
     }
-    return 1;
+    return 1;//为
 }
 
 int main()
 {
-    int i,sum=0,t=0;
-    std::cin>>l1>>l2;
-    for(i=pow(10,l1-1);i<pow(10,l1);i++)
-    {
-        Input(i);
-        if(i%l2!=0&&Judge(num)==0) 
-        {
-            std::cout<<i<<std::endl;
-        }
-    }
+    int i;
+    cout<<Judge2(16718)<<endl;
+    cout<<Judge2(16719)<<endl;
     return 0;
 }
