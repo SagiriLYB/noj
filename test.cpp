@@ -1,13 +1,12 @@
 #include<iostream>
 #include<stdio.h>
-using namespace std;
+using std::cout;
+using std::endl;
 
 int main()
 {
-    double a,b,c,x,z;
-    scanf("%lf%lf%lf",&a,&b,&c);
-    x=a+b+c;
-    z=(a+b+c)/3;
-    printf("%lf\n%lf\n",x,z);
+    int a=10;
+    int *i=&a;
+    cout<<i<<endl;
     return 0;
 }
