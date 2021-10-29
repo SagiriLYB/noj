@@ -26,15 +26,16 @@ int Judge2(int n)//判断是否为合数世纪
 
 int main()
 {
-    int n,temp,i,t,j;
+    int n,temp,i,t,j=0;
     cin>>n;
     for(t=0;t<n;)
     {
-        for(i=1;j=0;i++)
+        for(i=1;;i++)
         {
             if(Judge2(i)==1)
             {
-                j=1;t++;temp=100*i;
+                t++;temp=100*i;
+                break;
             }
         }
     }
