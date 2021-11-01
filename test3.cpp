@@ -1,34 +1,32 @@
 #include <iostream>
-#include <cmath>
 
-using std::cout;
 using std::cin;
+using std::cout;
 using std::endl;
 
-int Judge1(int n)//判断是否存在素数
-{
-    int i;
-    for(i=3;i<=sqrt(n);i+=2)
-    {
-        if(n%i==0) return 0;//为合数
-    }
-    return 1;//为素数
-}
-
-int Judge2(int n)//判断是否为合数世纪
-{
-    int i;
-    for(i=100*n+1;i<100*(n+1)+1;i+=2)
-    {
-        if(Judge1(i)==1) return 0;//不为
-    }
-    return 1;//为
-}
+int N[5]={2,5,-1,2,-1};
+int n=5,i,mul;
 
 int main()
 {
-    int i;
-    cout<<Judge2(16718)<<endl;
-    cout<<Judge2(16719)<<endl;
-    return 0;
+    cout<<endl<<endl<<endl;
+    int n1,n2,mul=1,temp=1;
+    for(n1=0;n1<n;n1++)
+    {
+        for(n2=n-1;n2>n1;n2--)
+        {
+            temp=1;
+            for(i=n1;i<=n2;i++)
+            {
+                temp=temp*N[i];
+            }
+            if(mul<temp)
+            {
+                mul=temp;
+            }
+            cout<<endl<<"temp="<<temp<<endl;
+            cout<<"n1,n2="<<n1<<n2<<endl;
+        }
+    }
+    cout<<endl<<mul;
 }
