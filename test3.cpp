@@ -4,29 +4,40 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-int N[5]={2,5,-1,2,-1};
-int n=5,i,mul;
+int N[10];
+int i1,i2,i3;
+int n;
+int temp;
+
+void In(int n)//转换为数组
+{
+    for(i1=0;n>0;i1++)
+    {
+        N[i1]=n%10;
+        n/=10;
+    }
+    temp=i1;
+}
+
+int Cal()//统计1数量
+{
+    int t=0;
+    for(i2=0;i2<temp;i2++)
+    {
+        if(N[i2]==1) t++;
+    }
+    return t;
+}
 
 int main()
 {
-    cout<<endl<<endl<<endl;
-    int n1,n2,mul=1,temp=1;
-    for(n1=0;n1<n;n1++)
+    cin>>n;
+    int sum=0;
+    for(i3=1;i3<=n;i3++)
     {
-        for(n2=n-1;n2>n1;n2--)
-        {
-            temp=1;
-            for(i=n1;i<=n2;i++)
-            {
-                temp=temp*N[i];
-            }
-            if(mul<temp)
-            {
-                mul=temp;
-            }
-            cout<<endl<<"temp="<<temp<<endl;
-            cout<<"n1,n2="<<n1<<n2<<endl;
-        }
+        In(i3);
+        sum=sum+Cal();
     }
-    cout<<endl<<mul;
+    cout<<sum;
+    return 0;
 }

@@ -12,9 +12,10 @@ int main()
     {
         if(i%3==a&&i%5==b&&i%7==c)
         {
-            break;
+            cout<<i;
+            return 0;
         }
     }
-    cout<<i;
+    cout<<"-1";
     return 0;
 }
