@@ -1,15 +1,27 @@
-#include <iostream>
-#include <string>
-using namespace std;
+#include <stdio.h>
+#include <stdlib.h>
+
 int main()
-{	
-	string mystring("cdsiao");
-	int num = mystring.size();
-	for (int i=0 ; i<num ; i++)
-	{
-		mystring[i] = 'X';
-	}
-	cout<<mystring;	
+{
+    int i,n;
+    for(i=2;i<=1000;i++)
+    {
+		int sum=0;
+		for(n=1;n<i;n++)
+        {
+            if(i%n==0)
+				sum=sum+n;
+        }
+        if(i==sum)
+        {
+            printf("%d=1",i);
+			for(n=2;n<=i-1;n++)
+			{
+				if(i%n==0)printf("+%d",n);
+			}
+			printf("\n");
+        }
+    }
+	
     return 0;
 }
-
