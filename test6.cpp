@@ -1,19 +1,14 @@
-#include <string>
-#include <iostream>
-
-using std::string;
-using std::cout;
-using std::cin;
-using std::endl;
-
+#include<stdio.h>
 int main()
 {
-    int i;
-    string ms1,ms2;
-    while(cin>>ms1)
+	int x,y=0,t;
+	scanf("%d",&x);
+	for(t=1;x/t>0;t*=10)
     {
-        ms2=ms1+ms2+" ";
-    }
-    cout<<ms2<<endl;
-    return 0;
-}
+		y+=x/(t*10)*t;
+		if(x/t%10>1) y+=t;
+		else if((x/t)%10) y+=x%t+1;
+	}
+	printf("%d\n",y);
+	return 0;
+ } 

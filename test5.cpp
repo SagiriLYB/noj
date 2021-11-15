@@ -8,12 +8,9 @@ using std::endl;
 
 int main()
 {
-    int i;
-    string ms1,ms2;
-    while(cin>>ms1)
-    {
-        ms2=ms1+" "+ms2;
-    }
-    cout<<ms2<<endl;
+    int a=0,b=0;
+    cin>>a;
+    b=a%10;
+    cout<<b<<endl;
     return 0;
 }
