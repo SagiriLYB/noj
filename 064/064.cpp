@@ -13,10 +13,10 @@ int main()
 {
     int Line=1;
 
-    ifstream in1;
-    ifstream in2;
-    in1.open("/Users/gn/Documents/GitHub/noj/064/DATA5613.CPP");
-    in2.open("/Users/gn/Documents/GitHub/noj/064/DATA5613.TXT");
+    ifstream in1("./noj/064/DATA5613.CPP");
+    ifstream in2("./noj/064/DATA5613.TXT");
+    //in1.open("./noj/064/DATA5613.CPP");
+    //in2.open("./noj/064/DATA5613.TXT");
 
     if(in1&&in2)
     {

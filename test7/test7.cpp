@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <unistd.h>
 
 using std::cout;
 using std::cin;
@@ -13,10 +14,15 @@ int main()
 {
     int Line=1;
 
+    char dire[256];
+    char *val=getcwd(dire,sizeof(dire));
+    string dir1=dire,dir2=dire;
+    dir1+="/1.txt";dir2+="/2.txt";
+
     ifstream in1;
     ifstream in2;
-    in1.open("/Users/gn/Documents/GitHub/noj/064/DATA5613.CPP");
-    in2.open("/Users/gn/Documents/GitHub/noj/064/DATA5613.TXT");
+    in1.open("/Users/gn/Documents/GitHub/test7/1.txt");
+    in2.open("/Users/gn/Documents/GitHub/test7/2.txt");
 
     if(in1&&in2)
     {
