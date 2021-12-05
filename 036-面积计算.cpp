@@ -6,7 +6,8 @@ using std::endl;
 
 int main()
 {
-    float a=1.23;
-    cout<<int(a);
+    double a,b,c;
+    cin>>a>>b>>c;
+    cout<<a*a<<endl<<b*c;
     return 0;
 }

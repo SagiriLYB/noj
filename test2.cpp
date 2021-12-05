@@ -1,10 +1,31 @@
-#pragma GCC diagnostic error "-std=c++11"
 #include <iostream>
+#include <string>
+#include <sstream>
 using namespace std;
-int main(int argc,char **argv)
+
+int main()
 {
-    cout<<"hello world!"<<endl;
-    auto i=10;
-    cout<<i<<endl;
+    // Write C++ code here
+    
+    int n=10;
+    string mystr;
+    string item;
+    getline(cin, mystr, '\n');
+    cout << "-----------" << endl;
+    cout << mystr << endl;
+    cout << "-----------" << endl;
+    int myarr[10];
+    int i=0;
+    stringstream text_stream(mystr);
+    while (std::getline(text_stream, item, ' ')) 
+    {
+        myarr[i]=stoi(item);
+        i++;
+    }
+    for(int j=0; j<5; j++)
+    {
+        cout << myarr[j] << endl;
+    }
     return 0;
 }
+

@@ -1,22 +1,28 @@
-#include <stdio.h>
-#include <stdlib.h>
-int fun(int m,int n)
+#include <iostream>
+
+using std::cout;
+using std::cin;
+using std::endl;
+
+int Cal(int m,int n)//计算组合数
 {
-	int y,y1=1,y2=1,i;
-	for(i=0;i<n;i++)
-		y1=y1*(m-i);
-	for(;n>0;n--)
-		y2=y2*n;
-	y=y1/y2;
-	return(y);
+	int de=1,nu=1;
+	for(int i=m;i>m-n;i--) 
+	{
+		de*=i;
+	}
+	for(int i=n;i>0;i--)
+	{
+		nu*=i;
+	}
+	return de/nu;
 }
+
 int main()
 {
-int m,n;
-scanf("%d %d",&m,&n);
-if(n>m||n<0||m<0)
-printf("wrong\n");
-else
-printf("%d\n",fun(m,n));
-return 0;
+	int m,n;
+	cin>>m>>n;
+	if(m<=n) cout<<"invalid value"<<endl;
+	cout<<Cal(m,n)<<endl;
+	return 0;
 }
