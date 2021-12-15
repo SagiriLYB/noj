@@ -27,6 +27,6 @@ int main()
         else if(a==' ') Sp++;
         else Ot++;
     }
-    cout<<UC<<' '<<LC<<' '<<Nu<<' '<<Sp<<' '<<Ot;
+    cout<<UC<<' '<<LC<<' '<<Nu<<' '<<Sp<<' '<<Ot<<'\n';
     return 0;
 }
