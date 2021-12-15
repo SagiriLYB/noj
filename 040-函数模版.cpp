@@ -13,7 +13,7 @@ stringstream mss1,mss2;
 int j;
 int s;//判断标志
 
-template <typename T>
+template <typename T>//排序函数模版
 void Sort(T &v1,T &v2,T &v3)
 {
     if(v1>v2&&v2>v3) mss2<<v3<<' '<<v2<<' '<<v1;

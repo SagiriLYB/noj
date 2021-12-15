@@ -1,10 +1,14 @@
 #include <iostream>
 #include <vector>
+#include <string>
+#include <sstream>
 
 using std::cin;
 using std::cout;
 using std::endl;
 using std::vector;
+using std::string;
+using std::stringstream;
 
 int NoT;//恐怖水母的触手数
 int NoS;//海绵宝宝数量
@@ -28,15 +32,15 @@ int Jud1()//判断可解性
 
 int main()
 {
-    cin>>NoT>>NoS;
-    while(cin>>t)
+    string line,b;
+    int a;
+    getline(cin,line);
+    stringstream ss(line);
+    vector<int> mv1;
+    while(ss>>a) 
     {
-        DoT.push_back(t);
+        cout<<a<<endl;
+        mv1.push_back(a);
     }
-    while(cin>>t)
-    {
-        CaC.push_back(t);
-    }
-
-    Jud1();
+    for(auto c:mv1) cout<<c<<' ';
 }

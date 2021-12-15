@@ -1,33 +1,35 @@
 #include <iostream>
+#include <vector>
 #include <string>
 #include <sstream>
 
 using std::cin;
 using std::cout;
 using std::endl;
+using std::vector;
 using std::string;
-using std::stod;
 using std::stringstream;
 
-template <typename T>
-void sort(T &v1,T &v2,T &v3)
-{
-    if(v1>v2&&v2>v3) cout<<v3<<' '<<v2<<' '<<v1;
-    else if(v1>v3&&v3>v2) cout<<v2<<' '<<v3<<' '<<v1;
-    else if(v2>v1&&v1>v3) cout<<v3<<' '<<v1<<' '<<v2;
-    else if(v2>v3&&v3>v1) cout<<v1<<' '<<v3<<' '<<v2;
-    else if(v3>v2&&v2>v1) cout<<v1<<' '<<v2<<' '<<v3;
-    else if(v3>v1&&v1>v2) cout<<v2<<' '<<v1<<' '<<v3;
-}
+int NoT;//恐怖水母的触手数
+int NoS;//海绵宝宝数量
+string DoTs;//恐怖水母触手直径(字符串)
+string CaCs;//海绵宝宝能力值、金币(字符串)
+vector<int> DoTv{5,4};//恐怖水母触手直径(数组)
+vector<int> CaCv{7,8,4};//海绵宝宝能力值、金币(数组)
 
-stringstream mss;
-
+int t,t1;//临时值
+stringstream sst;
 int main()
 {
-    string ms="10.1 20.2 30.3";
-    double a,b,c;
-    mss<<ms;
-    mss>>a>>b>>c;
-    cout<<a<<' '<<b<<' '<<c<<endl<<ms;
-    return 0;
+    t=0;
+    for(auto &t2:DoTv)
+    {
+        for(auto &t3:CaCv)
+        {
+            if(t3>=t2)
+            {
+                if(t3<t)
+            }
+        }
+    }
 }
