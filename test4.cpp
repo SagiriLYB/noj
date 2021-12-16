@@ -1,19 +1,20 @@
+#include <string>
 #include <iostream>
+#include <vector>
+#include <sstream>
 
 using std::cin;
 using std::cout;
 using std::endl;
+using std::string;
+using std::vector;
+using std::stringstream;
+
+
 
 int main()
 {
-    int n,sum;
-    int i1,i2,i3;
-    cin>>n;
-    sum+=n/10;
-    for(i1=10;i1<=n;i1*=10)
-    {
-        if(n/i1==1) sum+=10;
-        if(n)
-    }
-    return 0;
+    char a='a';
+    int i=a;
+    cout<<i<<' '<<a;
 }

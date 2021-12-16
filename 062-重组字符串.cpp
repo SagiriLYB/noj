@@ -10,13 +10,28 @@ using std::string;
 using std::vector;
 using std::stringstream;
 
+int TS(char a)
+{
+
+}
+
 int main()
 {
-    string ms1,ms2;
-    int l;
+    string ms1,ms2,ms3;
+    vector<char> mv1;
+    int t,i=0;
+
     getline(cin,ms1);
-    cin>>l;
-    ms2=ms1.substr(l);
-    cout<<ms2;
+
+    for(char a:ms1)
+    {
+        if(i%2==1&&a%2==1)
+        {
+            mv1.push_back(a);
+        }
+        i++;
+    }
+    for(auto a:mv1)
+    cout<<a;
     return 0;
 }
