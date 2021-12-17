@@ -10,11 +10,6 @@ using std::string;
 using std::vector;
 using std::stringstream;
 
-int TS(char a)
-{
-
-}
-
 int main()
 {
     string ms1,ms2,ms3;

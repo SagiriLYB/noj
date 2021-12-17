@@ -22,7 +22,11 @@ int main()
 {
 	int m,n;
 	cin>>m>>n;
-	if(m<=n) cout<<"invalid value"<<endl;
+	if(m<=n)
+	{
+		cout<<"invalid value"<<endl;
+		return 0;
+	}
 	cout<<Cal(m,n)<<endl;
 	return 0;
 }

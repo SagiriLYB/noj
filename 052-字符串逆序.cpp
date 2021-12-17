@@ -17,6 +17,7 @@ int main()
 	getline(cin,A);
 	while(A[j]!='=')
 	{
+		
 		B[j]=A[j];
 		j++;
 	}
