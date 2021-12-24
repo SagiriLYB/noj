@@ -12,7 +12,7 @@ int main()
     ofstream outfile("./noj/DATA5612.TXT",ios::out);
     string line;
     int i=1;
-    while(!getline(infile,line).eof())
+    while(getline(infile,line))
     outfile<<i++<<" "<<line<<endl;
     return 0;
 }

@@ -14,7 +14,9 @@ using std::stringstream;
 
 int main()
 {
-    char a='a';
-    int i=a;
-    cout<<i<<' '<<a;
+    int a;
+    string ms;
+    cin>>a;
+    getline(cin,ms);
+    return 0;
 }
