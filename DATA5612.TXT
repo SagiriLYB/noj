@@ -1,32 +1,32 @@
-1 #include <string>
-2 #include <iostream>
-3 #include <vector>
-4 #include <sstream>
-5 
-6 using std::cin;
-7 using std::cout;
-8 using std::endl;
-9 using std::string;
-10 using std::vector;
-11 using std::stringstream;
-12 
-13 int main()
-14 {
-15     string ms1,ms2,ms3;
-16     vector<char> mv1;
-17     int t,i=0;
-18 
-19     getline(cin,ms1);
-20 
-21     for(char a:ms1)
-22     {
-23         if(i%2==1&&a%2==1)
-24         {
-25             mv1.push_back(a);
-26         }
-27         i++;
-28     }
-29     for(auto a:mv1)
-30     cout<<a;
-31     return 0;
-32 }
+0001 #include <string>
+0002 #include <iostream>
+0003 #include <vector>
+0004 #include <sstream>
+0005 
+0006 using std::cin;
+0007 using std::cout;
+0008 using std::endl;
+0009 using std::string;
+0010 using std::vector;
+0011 using std::stringstream;
+0012 
+0013 int main()
+0014 {
+0015     string ms1,ms2,ms3;
+0016     vector<char> mv1;
+0017     int t,i=0;
+0018 
+0019     getline(cin,ms1);
+0020 
+0021     for(char a:ms1)
+0022     {
+0023         if(i%2==1&&a%2==1)
+0024         {
+0025             mv1.push_back(a);
+0026         }
+0027         i++;
+0028     }
+0029     for(auto a:mv1)
+0030     cout<<a;
+0031     return 0;
+0032 }
