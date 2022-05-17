@@ -48,11 +48,11 @@ int main()
     t1=mv1.size();
     if(t1%2==0)
     {
-        for(i1=1;i1<=t1;i1+=2)
+        for(i1=0;i1<t1;i1+=2)
         {
             cout<<mv1[i1]<<' ';
         }
-        for(i2=t1-2;i2>=0;i2-=2)
+        for(i2=t1-1;i2>0;i2-=2)
         {
             cout<<mv1[i2]<<' ';
         }

@@ -1,23 +1,23 @@
-#include <string>
-#include <iostream>
-#include <vector>
-#include <sstream>
+#include <stdio.h>
+#include <math.h>
 
-using std::cin;
-using std::cout;
-using std::endl;
-using std::string;
-using std::vector;
-using std::stringstream;
-
-struct Sales_data
-{
-	std::string bookNo;
-	unsigned units_sold=0;
-	double revenue=0.0;
-};
+using namespace std;
 
 int main()
 {
-	
+	int a,b,p,q,p1,q1;
+	scanf("%d%d",&a,&b);
+	p=1,q=0;
+	for(q1=1;q1<=b;q1++)
+	{
+		p1=(double)(q1*a)/(double)b+0.5;
+		if(q*fabs(a*q1-b*p1)<q1*fabs(a*q-b*p))
+		{
+			q=q1;
+			p=p1;
+			printf("%d/%d\n",p,q);
+		}
+		if(a*q==b*p) break;
+	}
+	return 0;
 }
